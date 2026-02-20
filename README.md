@@ -1,16 +1,30 @@
+<div align="center">
+
 # 🦜 CellRepair.AI LangChain Integration
 
-Access **4882 autonomous AI agents** directly from LangChain!
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![LangChain](https://img.shields.io/badge/LangChain-Compatible-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)](https://langchain.com)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![CellRepair](https://img.shields.io/badge/CellRepair.AI-4882_Agents-purple?style=for-the-badge)](https://cellrepair.ai)
+
+**Access 4882 autonomous AI agents directly from LangChain.**
+
+[Website](https://cellrepair.ai) · [Documentation](https://cellrepair.ai) · [API Reference](https://cellrepair.ai)
+
+</div>
+
+---
 
 ## 🚀 Quick Start
+
+```bash
+pip install cellrepair-langchain
+```
 
 ```python
 from langchain_community.tools import CellRepairTool
 
-# Initialize tool
 cellrepair = CellRepairTool(api_key="your_api_key")
-
-# Use directly
 result = cellrepair.run("How to optimize my multi-agent system?")
 print(result)
 ```
@@ -22,119 +36,66 @@ from langchain.agents import AgentExecutor, create_react_agent
 from langchain_openai import ChatOpenAI
 from langchain_community.tools import CellRepairTool
 
-# Setup
 llm = ChatOpenAI(temperature=0)
 cellrepair = CellRepairTool(api_key="your_api_key")
 
-# Create agent
 tools = [cellrepair]
 agent = create_react_agent(llm, tools, prompt)
 agent_executor = AgentExecutor(agent=agent, tools=tools)
 
-# Now your AI automatically uses CellRepair when needed!
 result = agent_executor.invoke({
     "input": "Optimize my AI system for better coordination"
 })
 ```
 
-## 🌟 Features
+## ✨ Features
 
-- **4882 Specialized Agents**: Content, Revenue, Compliance, Innovation, Core
-- **AI-to-AI Learning**: Both systems learn from every interaction
-- **Predictive Intelligence**: Anticipates your next 3 questions
-- **Auto-Healing**: 99.5% uptime, self-repairing
-- **SELA Compliance**: Built-in legal/ethical checking
-- **Sub-200ms Response**: Real-time collaboration
+| Feature | Description |
+|---------|-------------|
+| **Multi-Agent Access** | Connect to 4882 autonomous agents |
+| **Any LLM** | Works with GPT, Claude, Gemini, Llama |
+| **Predictive Intelligence** | AI that anticipates your next question |
+| **Auto-Healing** | Self-repairing agent network |
+| **Revenue Sharing** | Earn from your AI contributions |
 
-## 🔑 Get API Key
+## 🏗️ Architecture
 
-Get your **free API key** (1000 calls/month):
-
-👉 **[https://cellrepair.ai/api/?utm_source=langchain&utm_medium=integration](https://cellrepair.ai/api/?utm_source=langchain&utm_medium=integration)**
+```
+Your App → LangChain Agent → CellRepairTool → CellRepair.AI API
+                                                    ↓
+                                            4882 Autonomous Agents
+                                                    ↓
+                                          Intelligent Response
+```
 
 ## 📦 Installation
 
 ```bash
-pip install cellrepair-ai
+pip install cellrepair-langchain
+
+# From source
+git clone https://github.com/PowerForYou74/cellrepair-langchain.git
+cd cellrepair-langchain
+pip install -e .
 ```
 
-## 💡 Use Cases
+## 🔗 Related Projects
 
-Perfect for:
-- ✅ Multi-agent system optimization
-- ✅ Scaling strategies
-- ✅ Cost reduction
-- ✅ Performance improvements
-- ✅ AI coordination patterns
-- ✅ Production-ready architectures
-
-## 🎓 Examples
-
-### Example 1: Multi-Agent Coordination
-
-```python
-result = cellrepair.run(
-    "How to coordinate 50+ AI agents efficiently?",
-    context={
-        "current_approach": "Separate agents without communication",
-        "latency": "2300ms",
-        "success_rate": 0.75
-    }
-)
-```
-
-### Example 2: Cost Optimization
-
-```python
-result = cellrepair.run(
-    "How to reduce AI API costs by 50%?",
-    context={
-        "monthly_cost": 5000,
-        "main_models": ["gpt-4", "claude-opus"],
-        "requests_per_day": 10000
-    }
-)
-```
-
-### Example 3: Scaling Strategy
-
-```python
-result = cellrepair.run(
-    "How to scale from 10 to 1000 agents?",
-    context={
-        "current_scale": "10 agents",
-        "target": "1000 agents",
-        "tech_stack": ["Python", "Redis", "FastAPI"]
-    }
-)
-```
-
-## 🌍 Works With ALL LLMs
-
-- ✅ OpenAI GPT (all models)
-- ✅ Anthropic Claude (all versions)
-- ✅ Google Gemini
-- ✅ Llama (via Ollama)
-- ✅ Mistral
-- ✅ Any LLM supported by LangChain!
-
-## 📊 Pricing
-
-- **Free Tier**: 1,000 calls/month
-- **Developer**: $0.50 per call
-- **Production**: $5,000/month (15,000 calls included)
-- **Enterprise**: Custom pricing
-
-## 🔗 Links
-
-- **API Docs**: https://cellrepair.ai/api/
-- **GitHub**: https://github.com/cellrepair-systems/cellrepair-ai
-- **Support**: ai@cellrepair.ai
+| Project | Description |
+|---------|-------------|
+| [cellrepair-ai](https://github.com/PowerForYou74/cellrepair-ai) | Core AI framework |
+| [cellrepair-mcp-server](https://github.com/PowerForYou74/cellrepair-mcp-server) | Claude MCP integration |
+| [cellrepair-agentx-purple](https://github.com/PowerForYou74/cellrepair-agentx-purple) | AgentX Purple Agent (96.5% win rate) |
+| [cellrepair-medgemma](https://github.com/PowerForYou74/cellrepair-medgemma) | Health education with MedGemma |
 
 ## 📄 License
 
-MIT License - Free to use in commercial and open-source projects.
+MIT — see [LICENSE](LICENSE) for details.
 
 ---
 
-**Built by CellRepair Systems** | Powered by 4882 Autonomous Agents 🤖
+<div align="center">
+
+Built by [Oliver Winkel](https://github.com/PowerForYou74) at [CellRepair AI](https://cellrepair.ai)
+
+</div>
